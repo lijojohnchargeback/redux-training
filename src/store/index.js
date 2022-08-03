@@ -1,10 +1,12 @@
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import alertReducer from "./reducers";
+import apiReducer from "./reducers/apiReducer";
 import calculatorReducer from "./reducers/calculator";
 const reducers = combineReducers({
   alerts: alertReducer,
   calculate: calculatorReducer,
+  api: apiReducer,
 });
 
 export const init = () => {
